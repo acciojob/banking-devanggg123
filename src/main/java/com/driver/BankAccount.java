@@ -8,11 +8,6 @@ public class BankAccount {
 
 
 
-    public BankAccount(String name, double balance, double minBalance) {
-        this.name = name;
-        this.balance = balance;
-        this.minBalance = minBalance;
-    }
 
     public String generateAccountNumber(int digits, int sum) throws Exception{
         //Each digit of an account number can lie between 0 and 9 (both inclusive)
@@ -32,7 +27,7 @@ public class BankAccount {
 
     public void deposit(double amount) {
         //add amount to balance
-        this.balance +=amount;
+        balance +=amount;
 
     }
 
@@ -43,7 +38,7 @@ public class BankAccount {
             throw new ArithmeticException("Insufficient Balance");
         }
         else{
-            this.balance =this.balance-amount;
+            balance =balance-amount;
         }
     }
 
